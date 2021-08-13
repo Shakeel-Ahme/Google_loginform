@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google input fields</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1 {
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .l-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .form {
+        width: 360px;
+        padding: 4rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(92,99,105, .2);
+    }
+    .form-div {
+        position: relative;
+        height: 48px;
+        margin-bottom: 1.5rem;
+    }
+    .form-input {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        border: 1px solid lightgrey;
+        border-radius: .5rem;
+        outline: none;
+        padding: 1rem;
+        background: none;
+        z-index: 10;
+    }
+    .form-label {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        padding: 0 .25rem;
+        background-color: #fff;
+        transition: .3s;
+    }
+    .form-button {
+        display: block;
+        margin-left: auto;
+        padding: .75rem 2rem;
+        border: none;
+        background-color: darkcyan;
+        color: #fff;
+        border-radius: .5rem;
+        transition: .3s;
+    }
+    .form-button:hover {
+        box-shadow: 0 10px 36px rgba(0,0,0,.15);
+    }
+    .form-input:focus + .form-label {
+        top: -.5rem;
+        left: .8rem;
+        font-size: 12px;
+        color: cadetblue;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label{
+        top: -.5rem;
+        left: .8rem;
+        font-size: 12px;
+        color: cadetblue;
+        font-weight: 500;
+        z-index: 10;
+    }
+    .form-input:focus {
+        border: 1.5px solid cadetblue;
+    }
+</style>
+<body>
+   <div class="l-form">
+       <form action="" class="form">
+           <h1 class="form-title">Sign Up</h1>
+           <div class="form-div">
+               <input type="text" class="form-input" placeholder=" ">
+               <label for="" class="form-label">Email</label>
+           </div>
+           <div class="form-div">
+            <input type="password" class="form-input" placeholder=" ">
+            <label for="" class="form-label">Password</label>
+        </div>
+        <input type="submit" value="sign in" class="form-button">
+       </form>
+   </div>
+</body>
+</html>
